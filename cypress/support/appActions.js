@@ -1,0 +1,12 @@
+class authActions {
+
+  loginPage(user) {
+  cy.get('[name="username"]').should('be.visible')
+  cy.get('[name="username"]').type(user.username)
+  cy.get('[name="password"]').type(user.password, { log: false })
+  cy.get('[data-test="signin-submit"]').click()
+}
+
+   
+}
+export default new authActions();
