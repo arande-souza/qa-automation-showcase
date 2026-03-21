@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-import auth from "../support/appActions"
+import authActions from "../support/appActions"
+import userRandom from '../factories/usersFactory.js';
 
 describe('Authentication and Home Page - Cypress Real World App', () => {
 
@@ -13,7 +14,7 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
             const users = data.users
             const user = users[Math.floor(Math.random() * users.length)]
 
-            auth.loginPage(user)
+            authActions.loginPage(user)
         })
     })
 
@@ -21,7 +22,7 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
         cy.fixture('loginUsers').then((data) => {
             const users = data.users
             const user = users[Math.floor(Math.random() * users.length)]
-            auth.loginPage(user)
+            authActions.loginPage(user)
 
             cy.get('.MuiToolbar-root')
                 .should('be.visible')
@@ -32,5 +33,14 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
                 .and('contain', user.firstName)
         })
     })
+
+    it('should create a new account', () => {
+
+        cy.get('[data-test="signup"]')
+            .click()
+        authActions.createAccount(userRandom())
+
+    })
+
 
 })
