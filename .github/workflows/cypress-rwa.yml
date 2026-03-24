@@ -35,15 +35,17 @@ jobs:
       - name: Start RWA
         run: |
           cd cypress-realworld-app
-          nohup yarn dev > ../rwa.log 2>&1 &
+          nohup yarn start:ci > ../rwa.log 2>&1 &
 
       - name: Wait for app
-        run: |
-          cd cypress-realworld-app
-          npx wait-on http://localhost:3000 http://localhost:3001 --timeout 180000
+        run: npx wait-on http://localhost:3000 http://localhost:3001 --timeout 300000
 
       - name: Run Cypress
         run: npx cypress run
+
+      - name: Show RWA log on failure
+        if: failure()
+        run: cat rwa.log
 
       - name: Upload screenshots
         if: always()
