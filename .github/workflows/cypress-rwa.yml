@@ -10,7 +10,7 @@ on:
 jobs:
   e2e:
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     steps:
       - name: Checkout
@@ -20,16 +20,23 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 22.15.0
-          cache: yarn
+          cache: npm
 
-      - name: Install dependencies
+      - name: Install root dependencies
+        run: npm ci
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Install RWA dependencies
+        working-directory: ./cypress-realworld-app
         run: yarn --frozen-lockfile
 
       - name: Run Cypress E2E
         uses: cypress-io/github-action@v7
         with:
           install: false
-          start: yarn dev
+          start: yarn --cwd cypress-realworld-app dev
           wait-on: "http://localhost:3000, http://localhost:3001"
           wait-on-timeout: 180
           browser: electron
