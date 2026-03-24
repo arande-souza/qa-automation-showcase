@@ -37,6 +37,9 @@ jobs:
       - name: Apply patches
         run: yarn patch-package
 
+      - name: Build RWA
+        run: yarn build:ci
+
       - name: Start RWA
         run: |
           nohup yarn start:ci > ../rwa.log 2>&1 &
