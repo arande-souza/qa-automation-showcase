@@ -28,14 +28,15 @@ jobs:
           cache: yarn
           cache-dependency-path: cypress-realworld-app/yarn.lock
 
+      - name: Install root dependencies
+        run: npm ci
+        working-directory: .
+
       - name: Enable Corepack
         run: corepack enable
 
       - name: Install RWA dependencies
         run: yarn --frozen-lockfile --ignore-scripts
-
-      - name: Install Cypress binary
-        run: npx cypress install
 
       - name: Apply patches
         run: yarn patch-package
@@ -52,7 +53,8 @@ jobs:
           yarn wait-on http://localhost:3000 http://localhost:3001 --timeout 300000 || (echo "===== RWA LOG =====" && cat ../rwa.log && exit 1)
 
       - name: Run Cypress
-        run: yarn cypress:run
+        run: npx cypress run --spec cypress/e2e/AllTests.cy.js
+        working-directory: .
 
       - name: Show RWA log on failure
         if: failure()
@@ -69,7 +71,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: cypress-realworld-app/cypress/screenshots
+          path: cypress/screenshots
           if-no-files-found: ignore
           retention-days: 14
 
@@ -78,7 +80,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: cypress-realworld-app/cypress/videos
+          path: cypress/videos
           if-no-files-found: ignore
           retention-days: 14
 
