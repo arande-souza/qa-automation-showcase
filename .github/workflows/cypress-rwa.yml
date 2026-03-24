@@ -11,52 +11,50 @@ jobs:
   e2e:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: ./cypress-realworld-app
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v4
         with:
           node-version: 22.15.0
-          cache: npm
-
-      - name: Install root dependencies
-        run: npm ci
+          cache: yarn
+          cache-dependency-path: cypress-realworld-app/yarn.lock
 
       - name: Enable Corepack
         run: corepack enable
 
       - name: Install RWA dependencies
-        working-directory: ./cypress-realworld-app
         run: yarn --frozen-lockfile
 
       - name: Start RWA
         run: |
-          cd cypress-realworld-app
           nohup yarn start:ci > ../rwa.log 2>&1 &
 
       - name: Wait for app
         run: |
-          cd cypress-realworld-app
           yarn wait-on http://localhost:3000 http://localhost:3001 --timeout 300000 || (echo "===== RWA LOG =====" && cat ../rwa.log && exit 1)
 
       - name: Run Cypress
-        run: npx cypress run
+        run: yarn cypress:run
 
       - name: Show RWA log on failure
         if: failure()
         run: |
           echo "===== RWA LOG ====="
-          cat rwa.log
+          cat ../rwa.log
 
       - name: Upload screenshots
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: cypress-screenshots
-          path: cypress/screenshots
+          path: cypress-realworld-app/cypress/screenshots
           if-no-files-found: ignore
           retention-days: 14
 
@@ -65,7 +63,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cypress-videos
-          path: cypress/videos
+          path: cypress-realworld-app/cypress/videos
           if-no-files-found: ignore
           retention-days: 14
 
