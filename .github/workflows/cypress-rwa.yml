@@ -32,7 +32,10 @@ jobs:
         run: corepack enable
 
       - name: Install RWA dependencies
-        run: yarn --frozen-lockfile
+        run: yarn --frozen-lockfile --ignore-scripts
+
+      - name: Apply patches
+        run: yarn patch-package
 
       - name: Start RWA
         run: |
