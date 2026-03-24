@@ -38,14 +38,18 @@ jobs:
           nohup yarn start:ci > ../rwa.log 2>&1 &
 
       - name: Wait for app
-        run: npx wait-on http://localhost:3000 http://localhost:3001 --timeout 300000
+        run: |
+          cd cypress-realworld-app
+          yarn wait-on http://localhost:3000 http://localhost:3001 --timeout 300000 || (echo "===== RWA LOG =====" && cat ../rwa.log && exit 1)
 
       - name: Run Cypress
         run: npx cypress run
 
       - name: Show RWA log on failure
         if: failure()
-        run: cat rwa.log
+        run: |
+          echo "===== RWA LOG ====="
+          cat rwa.log
 
       - name: Upload screenshots
         if: always()
