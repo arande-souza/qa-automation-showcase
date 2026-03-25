@@ -53,8 +53,11 @@ jobs:
           yarn wait-on http://localhost:3000 http://localhost:3001 --timeout 300000 || (echo "===== RWA LOG =====" && cat ../rwa.log && exit 1)
 
       - name: Run Cypress
-        run: npx cypress run --spec cypress/e2e/AllTests.cy.js
+        run: npx cypress run --record --spec cypress/e2e/AllTests.cy.js
         working-directory: .
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Show RWA log on failure
         if: failure()

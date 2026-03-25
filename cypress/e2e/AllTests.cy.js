@@ -42,5 +42,24 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
 
     })
 
+    it('should create a new account and login later', () => {
+        const user = userRandom();
+        
+        cy.wrap(user).as('createdUser');
+        
+        cy.get('[data-test="signup"]')
+            .click();
+        authActions.createAccount(user);
+        
+        cy.get('@createdUser').then((createdUser) => {
+            cy.log(createdUser.username);
+            authActions.loginPage(createdUser)
+        });
+        
+        cy.get('@createdUser').then((createdUser) => {
+            authActions.fillBankDetailsForm(createdUser);
+        });
+        
+    });
 
 })

@@ -16,6 +16,21 @@ class authActions {
         cy.get('[data-test="signup-submit"]').click()
     }
 
+    fillBankDetailsForm(createdUser){
+          cy.get('[data-test="user-onboarding-next"]')
+                .click();
+            cy.get('[name="bankName"]')
+                .type(`${createdUser.firstName} ${createdUser.lastName}`)
+            cy.get('[name="routingNumber"]')
+                .type(createdUser.routingNumber)
+            cy.get('[name="accountNumber"]').
+                type(createdUser.accountNumber)
+            cy.get('[data-test="bankaccount-submit"]')
+                .click();
+            cy.get('[data-test="user-onboarding-next"]')
+                .click();
+    }
+
 
 }
 export default new authActions();

@@ -7,6 +7,8 @@ const userRandom = () => {
   return {
     firstName,
     lastName,
+    routingNumber: faker.finance.routingNumber(),
+    accountNumber: faker.finance.accountNumber({ length: 9 }),
     username: `${firstName}${faker.number.int(1000)}`,
     password: "s3cret"
   };
