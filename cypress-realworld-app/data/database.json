@@ -82,7 +82,7 @@
       "lastName": "Ebert",
       "username": "Betty280",
       "password": "$2a$10$lZB4cu/5JwcHaFKItTU0pOEi7qL3ZpPQ7KHLQfSwKG41Jt5OHfUTy",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:35:31.123Z",
       "modifiedAt": "2026-03-25T02:35:31.123Z"
     },
@@ -93,7 +93,7 @@
       "lastName": "Collins",
       "username": "Remington956",
       "password": "$2a$10$i8XJMdBuGb.6c5Aq2vxxRu4rQ393iT74A4T6pGvWdBqgihcDKaxhq",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:36:07.956Z",
       "modifiedAt": "2026-03-25T02:36:07.956Z"
     },
@@ -104,7 +104,7 @@
       "lastName": "Gibson",
       "username": "Mckayla969",
       "password": "$2a$10$rg.dF4j7JcbtpYfwL8AQ4eGOdavn4iqH6aQI1rdxU7Y5uI/7XkLXW",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:36:13.262Z",
       "modifiedAt": "2026-03-25T02:36:13.262Z"
     },
@@ -115,7 +115,7 @@
       "lastName": "Reynolds-Collier",
       "username": "Regina176",
       "password": "$2a$10$QlvizfbZl5TbuFbDXy4/Cu4g4qGSDa2AkXDZsGWEcx8y2pdBj3LpS",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:51:31.876Z",
       "modifiedAt": "2026-03-25T02:51:31.876Z"
     },
@@ -126,7 +126,7 @@
       "lastName": "Windler",
       "username": "Zion544",
       "password": "$2a$10$eySVDQmE0zaRDWyAzhtJ7.pKaWg3Q71vpRtUj1k24EB1pBwQBpySy",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:52:05.553Z",
       "modifiedAt": "2026-03-25T02:52:05.553Z"
     },
@@ -137,7 +137,7 @@
       "lastName": "Marquardt",
       "username": "Lucy262",
       "password": "$2a$10$UCZlrscjrTHHcLx7PmBh0OS.ZGn/rKzhfg8hPFW7J2o7H2kVhOnE6",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:52:29.081Z",
       "modifiedAt": "2026-03-25T02:52:29.081Z"
     },
@@ -148,7 +148,7 @@
       "lastName": "Runolfsdottir",
       "username": "Danny92",
       "password": "$2a$10$A2pj0sbszvJQMLU8MsUjq.0512n3g3lfgDTgVgCwSb6Zk51w3nCTu",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:53:28.857Z",
       "modifiedAt": "2026-03-25T02:53:28.857Z"
     },
@@ -159,7 +159,7 @@
       "lastName": "Hermiston",
       "username": "Dashawn137",
       "password": "$2a$10$3JC3GsFYIh.CZ8nOyoeuJ.g9y5nBQPruxG4MAB6CWYOFV36JX0kQa",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:56:56.736Z",
       "modifiedAt": "2026-03-25T02:56:56.736Z"
     },
@@ -170,7 +170,7 @@
       "lastName": "Bernhard",
       "username": "Tavares286",
       "password": "$2a$10$Y35RXN2Uo3nbNVcteCqmVe6EpaT0OxFzGWdbiEDxBXHxmFDahEyiG",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:58:51.586Z",
       "modifiedAt": "2026-03-25T02:58:51.586Z"
     },
@@ -181,7 +181,7 @@
       "lastName": "Effertz",
       "username": "Rosemarie282",
       "password": "$2a$10$DBZMsrE9dguHMMuNPr14keumii/f575/WJs3YpQ6DPBqVP7qm7r7u",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T02:59:28.355Z",
       "modifiedAt": "2026-03-25T02:59:28.355Z"
     },
@@ -192,7 +192,7 @@
       "lastName": "Reichert",
       "username": "Philip800",
       "password": "$2a$10$ZAqifKVGNJZRpWFzVQMr/uvUaXK.DNXwsP3/tihaObPufnq5XlafK",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:00:14.689Z",
       "modifiedAt": "2026-03-25T03:00:14.689Z"
     },
@@ -203,7 +203,7 @@
       "lastName": "Lubowitz",
       "username": "Titus334",
       "password": "$2a$10$0Kd0wd.hc8EIhxg3bY5o3OS/OCgtXvb6l6etIQkMmGimDof/xx20O",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:04:26.173Z",
       "modifiedAt": "2026-03-25T03:04:26.173Z"
     },
@@ -214,7 +214,7 @@
       "lastName": "Ankunding",
       "username": "Ellen510",
       "password": "$2a$10$qTx07FoRVDTPKB5MG8ZwaeEiWx3CprhddryIcA4.TUjTJec0/F/Xy",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:06:27.211Z",
       "modifiedAt": "2026-03-25T03:06:27.211Z"
     },
@@ -225,7 +225,7 @@
       "lastName": "Mann",
       "username": "Diane912",
       "password": "$2a$10$My/L393cljRJkq0ECK3FAeSN/5brw8Ztx2LI0sWN5zq4T8mDMCS9i",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:07:41.413Z",
       "modifiedAt": "2026-03-25T03:07:41.413Z"
     },
@@ -236,7 +236,7 @@
       "lastName": "Hamill",
       "username": "Mariela294",
       "password": "$2a$10$WkjwkA4JR5SGA2ds/4V/Kel1xrjJQZuxb4.yrzyZxQCLwm4ml.WK.",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:09:07.096Z",
       "modifiedAt": "2026-03-25T03:09:07.096Z"
     },
@@ -247,7 +247,7 @@
       "lastName": "Cremin",
       "username": "Elmo544",
       "password": "$2a$10$6wOa5PEuSa6E.hRQPNZfBuq43njvL4qchPdtnZPGsF5ffLyu4wOA6",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:11:57.670Z",
       "modifiedAt": "2026-03-25T03:11:57.670Z"
     },
@@ -258,7 +258,7 @@
       "lastName": "Padberg",
       "username": "Houston480",
       "password": "$2a$10$tl9qUIZ85zHkWx8kbEPY4.yQlyeR1G0eWxJVDX5rnAhsxG85Uxw9S",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:17:06.256Z",
       "modifiedAt": "2026-03-25T03:17:06.256Z"
     },
@@ -269,7 +269,7 @@
       "lastName": "Walter",
       "username": "Rudy38",
       "password": "$2a$10$ucfoqVKSo5mNBn10RWNw/Oyd4iCyN5ctnaxOEK/G2AeJDjATb/II.",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:20:11.239Z",
       "modifiedAt": "2026-03-25T03:20:11.239Z"
     },
@@ -280,7 +280,7 @@
       "lastName": "Haag",
       "username": "Jacey408",
       "password": "$2a$10$vjwE8uaoqXC7dpjHiYmxM.x7/D1GRO0lI5VcKnzPCbrZIVQ/gvUMS",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:20:31.876Z",
       "modifiedAt": "2026-03-25T03:20:31.876Z"
     },
@@ -291,7 +291,7 @@
       "lastName": "Reichel",
       "username": "Ken23",
       "password": "$2a$10$z5IE7k/i2kAb4Tz4Ft2BIOFrUYUHRe7M2UpVaNg7/Yw5pI3zeK.wa",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:20:47.548Z",
       "modifiedAt": "2026-03-25T03:20:47.548Z"
     },
@@ -302,7 +302,7 @@
       "lastName": "Von",
       "username": "Deonte683",
       "password": "$2a$10$tMNJN7BGQLpD1R8ak9kt7uYoLGfJqdaGQZ7hC2GUEQEHx9wDB1/Tq",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:21:26.656Z",
       "modifiedAt": "2026-03-25T03:21:26.656Z"
     },
@@ -313,7 +313,7 @@
       "lastName": "Turner",
       "username": "Tammy863",
       "password": "$2a$10$9e7zXPnl0FmKt8kJ/9N2muAkEeQ8Ws9pwSBRvfMZe9OE72vMNkaWy",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:23:20.931Z",
       "modifiedAt": "2026-03-25T03:23:20.931Z"
     },
@@ -324,7 +324,7 @@
       "lastName": "Luettgen",
       "username": "Davon933",
       "password": "$2a$10$LLIkcnFBPSoqW3UrqzYeCOnHNAG0aqjX5fEYbV4FAILz5O1IudKKW",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:23:22.841Z",
       "modifiedAt": "2026-03-25T03:23:22.841Z"
     },
@@ -335,7 +335,7 @@
       "lastName": "Altenwerth",
       "username": "Nelson530",
       "password": "$2a$10$JqBG8mbY9gDunhv7TyQsC.VFKq8zr2R3rwIwcPjpbIm6ihkwpgbDu",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:26:29.640Z",
       "modifiedAt": "2026-03-25T03:26:29.640Z"
     },
@@ -346,7 +346,7 @@
       "lastName": "Stamm",
       "username": "Lorenzo534",
       "password": "$2a$10$qp9.3.d/6yTZWb7FN9Vwle6Vhbzt.82qMlUh8UY43h42/3oN.7KNi",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:26:44.152Z",
       "modifiedAt": "2026-03-25T03:26:44.152Z"
     },
@@ -357,7 +357,7 @@
       "lastName": "Kreiger",
       "username": "Malcolm161",
       "password": "$2a$10$WoLpY3rm6cK/wjBJZDbbY.oJ2IC0rga96Wl3uSgHmVVN110E8wacu",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:27:19.660Z",
       "modifiedAt": "2026-03-25T03:27:19.660Z"
     },
@@ -368,7 +368,7 @@
       "lastName": "Moen",
       "username": "Louise1",
       "password": "$2a$10$axQ/sm85/ZeQcwOmeqU8Q.TlqiPpK7sAvDskTLfQSQWhh1QgwRwi6",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:33:16.525Z",
       "modifiedAt": "2026-03-25T03:33:16.525Z"
     },
@@ -379,9 +379,20 @@
       "lastName": "Johnston",
       "username": "Raoul91",
       "password": "$2a$10$BsT84myA4FsbQ00x5xVRau3JL96Zy8PiBJ8ceTOI5Ok9/3CMJcomm",
-      "balance": 0,
+      "balance": 9000,
       "createdAt": "2026-03-25T03:33:18.296Z",
       "modifiedAt": "2026-03-25T03:33:18.296Z"
+    },
+    {
+      "id": "zl3EchdIQ",
+      "uuid": "3ccaa0e5-dcb5-4477-839b-ab1ff947ee9b",
+      "firstName": "Joel",
+      "lastName": "Trantow",
+      "username": "Joel725",
+      "password": "$2a$10$BlM4BqTlCVxUkBvnYVnr/.qoC6vdRq0JEyEsdPaLFKyt49w1fGepm",
+      "balance": 9000,
+      "createdAt": "2026-03-25T03:57:00.656Z",
+      "modifiedAt": "2026-03-25T03:57:00.656Z"
     }
   ],
   "contacts": [
@@ -682,6 +693,17 @@
       "isDeleted": false,
       "createdAt": "2026-03-25T03:33:19.982Z",
       "modifiedAt": "2026-03-25T03:33:19.982Z"
+    },
+    {
+      "id": "kKh8we1IL",
+      "uuid": "6d76db68-92ed-4720-b1e2-cff9ba42fd4b",
+      "userId": "zl3EchdIQ",
+      "bankName": "Joel Trantow",
+      "accountNumber": "689608403",
+      "routingNumber": "536750523",
+      "isDeleted": false,
+      "createdAt": "2026-03-25T03:57:02.352Z",
+      "modifiedAt": "2026-03-25T03:57:02.352Z"
     }
   ],
   "transactions": [
