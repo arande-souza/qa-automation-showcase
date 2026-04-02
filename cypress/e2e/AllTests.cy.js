@@ -34,7 +34,7 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
         })
     })
 
-    it('should create a new account', () => {
+    it('should create a bank account', () => {
 
         cy.get('[data-test="signup"]')
             .click()
@@ -42,24 +42,102 @@ describe('Authentication and Home Page - Cypress Real World App', () => {
 
     })
 
-    it('should create a new account and login later', () => {
+    it('should sign up user, login and add bank details', () => {
         const user = userRandom();
-        
+
         cy.wrap(user).as('createdUser');
-        
+
         cy.get('[data-test="signup"]')
             .click();
         authActions.createAccount(user);
-        
+
         cy.get('@createdUser').then((createdUser) => {
             cy.log(createdUser.username);
             authActions.loginPage(createdUser)
         });
-        
+
         cy.get('@createdUser').then((createdUser) => {
             authActions.fillBankDetailsForm(createdUser);
         });
-        
+
+    });
+
+
+    it('should create a bank account', () => {
+        const user = userRandom();
+
+        cy.wrap(user).as('createdUser');
+
+        cy.get('[data-test="signup"]')
+            .click();
+        authActions.createAccount(user);
+
+        cy.get('@createdUser').then((createdUser) => {
+            cy.log(createdUser.username);
+            authActions.loginPage(createdUser)
+        });
+
+        cy.get('@createdUser').then((createdUser) => {
+            authActions.fillBankDetailsForm(createdUser);
+        });
+
+        cy.get('[data-test="sidenav-bankaccounts"] > .MuiListItemText-root > .MuiTypography-root')
+            .contains('Bank Accounts')
+            .click();
+
+        cy.get('[data-test="bankaccount-new"]').click();
+        cy.get('@createdUser').then((createdUser) => {
+            authActions.fillBankDetailsFormSecondAccount(createdUser);
+        });
+    });
+
+    it('should create and delete the second bank account', () => {
+        const user = userRandom();
+
+        cy.wrap(user).as('createdUser');
+
+        cy.get('[data-test="signup"]')
+            .click();
+        authActions.createAccount(user);
+
+        cy.get('@createdUser').then((createdUser) => {
+            cy.log(createdUser.username);
+            authActions.loginPage(createdUser)
+        });
+
+        cy.get('@createdUser').then((createdUser) => {
+            authActions.fillBankDetailsForm(createdUser);
+        });
+
+        cy.get('[data-test="sidenav-bankaccounts"] > .MuiListItemText-root > .MuiTypography-root')
+            .contains('Bank Accounts')
+            .click();
+
+        cy.get('[data-test="bankaccount-new"]')
+            .click();
+
+        cy.get('@createdUser').then((createdUser) => {
+            authActions.fillBankDetailsFormSecondAccount(createdUser);
+        });
+
+        cy.get('@createdUser').then((createdUser) => {
+            const secondBankName = `${createdUser.firstName} ${createdUser.lastName} 2`;
+            const exactBankName = new RegExp(`^${Cypress._.escapeRegExp(secondBankName)}\\s*$`);
+
+            cy.contains('[data-test^="bankaccount-list-item-"] .MuiTypography-root', exactBankName)
+                .should('be.visible')
+                .parents('[data-test^="bankaccount-list-item-"]')
+                .first()
+                .within(() => {
+                cy.get('[data-test="bankaccount-delete"]')
+                .click();
+            });
+
+            cy.contains('[data-test^="bankaccount-list-item-"]', secondBankName)
+               .should('contain', 'Deleted');
+        });
+
+
     });
 
 })
